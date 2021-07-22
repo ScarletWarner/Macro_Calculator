@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Ranges">
+
+    <EditText
+        android:id="@+id/calorieRange"
+        android:layout_width="94dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="158dp"
+        android:layout_marginLeft="158dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="159dp"
+        android:layout_marginRight="159dp"
+        android:ems="10"
+        android:hint="2000-2200"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/calorieText" />
+
+    <EditText
+        android:id="@+id/fatRange"
+        android:layout_width="94dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="158dp"
+        android:layout_marginLeft="158dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="159dp"
+        android:layout_marginRight="159dp"
+        android:layout_marginBottom="117dp"
+        android:ems="10"
+        android:hint="40-45"
+        android:inputType="number"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fatText" />
+
+    <EditText
+        android:id="@+id/carbRange"
+        android:layout_width="94dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="158dp"
+        android:layout_marginLeft="158dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="159dp"
+        android:layout_marginRight="159dp"
+        android:ems="10"
+        android:hint="200-255"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/carbText" />
+
+    <EditText
+        android:id="@+id/fatText"
+        android:layout_width="137dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="137dp"
+        android:layout_marginLeft="137dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="137dp"
+        android:layout_marginRight="137dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Fat Range:"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/carbRange" />
+
+    <EditText
+        android:id="@+id/carbText"
+        android:layout_width="137dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="137dp"
+        android:layout_marginLeft="137dp"
+        android:layout_marginTop="34dp"
+        android:layout_marginEnd="137dp"
+        android:layout_marginRight="137dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Carbs Range:"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/proteinRange" />
+
+    <EditText
+        android:id="@+id/proteinText"
+        android:layout_width="137dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="137dp"
+        android:layout_marginLeft="137dp"
+        android:layout_marginTop="29dp"
+        android:layout_marginEnd="137dp"
+        android:layout_marginRight="137dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Protein Range:"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/calorieRange" />
+
+    <EditText
+        android:id="@+id/calorieText"
+        android:layout_width="137dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="137dp"
+        android:layout_marginLeft="137dp"
+        android:layout_marginTop="45dp"
+        android:layout_marginEnd="137dp"
+        android:layout_marginRight="137dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Calorie Range:"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/proteinRange"
+        android:layout_width="94dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="158dp"
+        android:layout_marginLeft="158dp"
+        android:layout_marginTop="35dp"
+        android:layout_marginEnd="159dp"
+        android:layout_marginRight="159dp"
+        android:ems="10"
+        android:hint="100-150"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/proteinText" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
