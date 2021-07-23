@@ -6,134 +6,94 @@
     android:layout_height="match_parent"
     tools:context=".Preferences">
 
-    <RadioGroup
-        android:id="@+id/fatGroup"
-        android:layout_width="406dp"
-        android:layout_height="54dp"
-        android:baselineAligned="false"
-        android:orientation="horizontal"
-        tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="353dp">
+    <RelativeLayout
+        android:layout_width="392dp"
+        android:layout_height="713dp"
+        app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"/>
 
-        <RadioButton
-            android:id="@+id/fatLowRadio"
-            android:layout_width="116dp"
-            android:layout_height="wrap_content"
-            android:text="Low" />
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView"
+        android:layout_width="409dp"
+        android:layout_height="71dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginBottom="1dp"
+        android:background="#bb2025"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scrollView"
+        tools:layout_editor_absoluteX="1dp">
 
-        <RadioButton
-            android:id="@+id/fatMedRadio"
-            android:layout_width="138dp"
-            android:layout_height="wrap_content"
-            android:text="Med" />
-
-        <RadioButton
-            android:id="@+id/fatHiRadio"
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="High" />
-    </RadioGroup>
+            android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/carbView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Carb"
-        android:textSize="20sp"
-        tools:layout_editor_absoluteX="185dp"
-        tools:layout_editor_absoluteY="302dp" />
+            <Button
+                android:id="@+id/buttonHelp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="309dp"
+                android:layout_marginLeft="309dp"
+                android:layout_marginTop="12dp"
+                android:background="#BB2025"
+                android:onClick="go2Help"
+                android:text="Learn"
+                app:backgroundTint="#BB2025"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
 
-    <RadioGroup
-        android:id="@+id/fatGroup"
-        android:layout_width="411dp"
-        android:layout_height="56dp"
-        android:baselineAligned="false"
-        android:orientation="horizontal"
-        tools:layout_editor_absoluteX="5dp"
-        tools:layout_editor_absoluteY="211dp">
+            <Button
+                android:id="@+id/buttonHome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="13dp"
+                android:background="#BB2025"
+                android:onClick="go2Home"
+                android:text="Home"
+                app:backgroundTint="#BB2025"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
 
-        <RadioButton
-            android:id="@+id/fatLowRadio"
-            android:layout_width="116dp"
-            android:layout_height="wrap_content"
-            android:text="Low" />
+            <Button
+                android:id="@+id/buttonRange"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="103dp"
+                android:layout_marginLeft="103dp"
+                android:layout_marginTop="13dp"
+                android:background="#BB2025"
+                android:onClick="go2Ranges"
+                android:text="Ranges"
+                app:backgroundTint="#BB2025"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
 
-        <RadioButton
-            android:id="@+id/fatMedRadio"
-            android:layout_width="138dp"
-            android:layout_height="wrap_content"
-            android:text="Med" />
+            <Button
+                android:id="@+id/buttonPref"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="204dp"
+                android:layout_marginLeft="204dp"
+                android:layout_marginTop="13dp"
+                android:background="#BB2025"
+                android:onClick="go2Pref"
+                android:text="Custom"
+                app:backgroundTint="#BB2025"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+        </RelativeLayout>
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
 
-        <RadioButton
-            android:id="@+id/fatHiRadio"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="High" />
-    </RadioGroup>
-
-    <TextView
-        android:id="@+id/preferences"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Preferences"
-        android:textSize="30sp"
-        android:textStyle="bold"
-        tools:layout_editor_absoluteX="123dp"
-        tools:layout_editor_absoluteY="73dp" />
-
-    <TextView
-        android:id="@+id/fatView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Fat"
-        android:textSize="20sp"
-        tools:layout_editor_absoluteX="192dp"
-        tools:layout_editor_absoluteY="155dp" />
-
-    <RadioGroup
-        android:id="@+id/fatGroup"
-        android:layout_width="402dp"
-        android:layout_height="47dp"
-        android:baselineAligned="false"
-        android:orientation="horizontal"
-        tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="483dp">
-
-        <RadioButton
-            android:id="@+id/fatLowRadio"
-            android:layout_width="116dp"
-            android:layout_height="wrap_content"
-            android:text="Low" />
-
-        <RadioButton
-            android:id="@+id/fatMedRadio"
-            android:layout_width="138dp"
-            android:layout_height="wrap_content"
-            android:text="Med" />
-
-        <RadioButton
-            android:id="@+id/fatHiRadio"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="High" />
-    </RadioGroup>
-
-    <TextView
-        android:id="@+id/proteinView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Protein"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="441dp" />
-
-    <Button
-        android:id="@+id/applyButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Apply"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="595dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>

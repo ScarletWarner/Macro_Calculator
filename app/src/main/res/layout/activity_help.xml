@@ -6,31 +6,114 @@
     android:layout_height="match_parent"
     tools:context=".Help">
 
-    <ScrollView
-        android:id="@+id/scrollView2"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:layout_width="409dp"
+        android:layout_height="71dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginBottom="1dp"
+        android:background="#bb2025"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scrollView"
+        tools:layout_editor_absoluteX="1dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/buttonHelp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="309dp"
+                android:layout_marginLeft="309dp"
+                android:layout_marginTop="12dp"
+                android:background="#BB2025"
+                android:onClick="go2Help"
+                android:text="Learn"
+                app:backgroundTint="#BB2025"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <Button
+                android:id="@+id/buttonHome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="13dp"
+                android:background="#BB2025"
+                android:onClick="go2Home"
+                android:text="Home"
+                app:backgroundTint="#BB2025"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <Button
+                android:id="@+id/buttonRange"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="103dp"
+                android:layout_marginLeft="103dp"
+                android:layout_marginTop="13dp"
+                android:background="#BB2025"
+                android:onClick="go2Ranges"
+                android:text="Ranges"
+                app:backgroundTint="#BB2025"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <Button
+                android:id="@+id/buttonPref"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="204dp"
+                android:layout_marginLeft="204dp"
+                android:layout_marginTop="13dp"
+                android:background="#BB2025"
+                android:onClick="go2Pref"
+                android:text="Custom"
+                app:backgroundTint="#BB2025"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+        </RelativeLayout>
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="0dp"
+        android:layout_height="657dp"
+        android:layout_marginTop="1dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <LinearLayout
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical" />
+            android:layout_height="657dp">
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="388dp"
+                android:layout_height="644dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="0dp"
+                android:text="TextView" />
+        </RelativeLayout>
     </ScrollView>
-
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="0dp"
-        android:layout_height="637dp"
-        android:layout_marginBottom="4dp"
-        android:text="Prety much a basic scrolling paragraph
-        page including all the helpful info. Paragraphs
-        for calories, protein, fat and carbs."
-        app:layout_constraintBottom_toBottomOf="@+id/scrollView2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
 </androidx.constraintlayout.widget.ConstraintLayout>
