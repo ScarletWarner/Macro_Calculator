@@ -4,12 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:scrollbarStyle="insideOverlay"
     tools:context=".MainActivity">
 
     <ScrollView
         android:id="@+id/scrollView"
-        android:layout_width="0dp"
-        android:layout_height="657dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_marginTop="1dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -324,7 +325,7 @@
         android:background="#bb2025"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/scrollView"
-        tools:layout_editor_absoluteX="1dp" >
+        tools:layout_editor_absoluteX="1dp">
 
         <RelativeLayout
             android:layout_width="match_parent"

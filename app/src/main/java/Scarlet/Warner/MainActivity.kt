@@ -12,7 +12,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
+    }
         fun go2Home (view: View){
             var intent=Intent(this,MainActivity::class.java)
             startActivity(intent)
@@ -63,20 +63,21 @@ class MainActivity : AppCompatActivity() {
                 }
         }
 
-        fun conversions (view: View){
-            var kg = weight/2.205
-            var cm = height*2.54
+        fun conversions (weight:Int, height:Int){
+            var kg :Double = weight/2.205
+            var cm :Double = height*2.54
         }
 
-        fun stjeor {
-            var cals
-            if (gender= "female") {
+        fun stjeor(kg:Double,cm:Double,gender:String,age:Int,goal:Int) {
+            
+            var cals: Double?=null
+            if (gender== "female") {
                 cals = (10*kg) +(6.25*cm)-(5*age)-161+goal
             }
-            if (gender= "male") {
+            if (gender== "male") {
                 cals = (10*kg) +(6.25*cm)-(5*age)+5+goal
             }
         }
 }
-}
+
 
