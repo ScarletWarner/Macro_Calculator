@@ -199,7 +199,7 @@
         android:layout_marginRight="137dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Calorie Range:"
+        android:text="Calories:"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

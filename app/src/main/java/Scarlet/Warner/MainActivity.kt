@@ -8,6 +8,7 @@ import android.content.Intent
 import kotlinx.android.synthetic.main.activity_main.view.*
 
 
+
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -70,13 +71,19 @@ class MainActivity : AppCompatActivity() {
 
         fun stjeor(kg:Double,cm:Double,gender:String,age:Int,goal:Int) {
             
-            var cals: Double?=null
+            var cals: Double=0.0
             if (gender== "female") {
                 cals = (10*kg) +(6.25*cm)-(5*age)-161+goal
             }
             if (gender== "male") {
                 cals = (10*kg) +(6.25*cm)-(5*age)+5+goal
             }
+        }
+
+        fun calculateRanges (view:View,cals:Double){                                                                                                                                                                                                                                                                                                                                                                               8
+            var intent=Intent(this,Ranges::class.java)
+            intent.putExtra("cals", cals)
+            startActivity(intent)
         }
 }
 

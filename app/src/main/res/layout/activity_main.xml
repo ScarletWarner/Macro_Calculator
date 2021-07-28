@@ -153,6 +153,7 @@
                 android:layout_marginEnd="154dp"
                 android:layout_marginRight="154dp"
                 android:layout_marginBottom="5dp"
+                android:onClick="calculateRanges"
                 android:text="Calculate"
                 app:backgroundTint="#737070" />
 
