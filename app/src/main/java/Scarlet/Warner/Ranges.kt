@@ -36,6 +36,8 @@ class Ranges : AppCompatActivity() {
         }
 
         fun calculateRanges(view:View) {
+
+            //ini variables
             var cals = intent.getDoubleExtra("cals", 0.0)
 
             var fat : Int=0
@@ -48,6 +50,7 @@ class Ranges : AppCompatActivity() {
             var lowCarb : Int=0
             var hiCarb : Int=0
 
+            //pull data from shared preferences (set in preferences.kt)
             myPref = getPreferences(MODE_PRIVATE)
             var databack: SharedPreferences? = null
             databack = getPreferences(0)
@@ -87,7 +90,7 @@ class Ranges : AppCompatActivity() {
                 2-> hiProt = Math.ceil((.35 * cals)/4)
                 3-> hiProt = Math.ceil((.50 * cals)/4)
             }
-
+            // set carb range
             when (carb) {
                 1-> lowCarb = Math.ceil((.1 * cals)/4)
                 1-> hiCarb = Math.ceil((.3 * cals)/4)
@@ -97,6 +100,7 @@ class Ranges : AppCompatActivity() {
                 3-> hiCarb = Math.ceil((.6 * cals)/4)
                 }
 
+            // apply text results
             calorieText.setText("${cals}")
             proteinRange.setText("${defProt}-${hiProt}")
             fatRange.setText("${lowFat} - ${hiFat}")

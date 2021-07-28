@@ -32,16 +32,22 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+        //pull data from screen
         fun getdata (view: View){
+
+            //set gender
             var gender: String?=null
                 when {
                     groupGender.radioFemale.isChecked -> gender = "female"
                     groupGender.radioMale.isChecked -> gender = "male"
                 }
+
+            //bio variables
             var age=inputAge.text
             var height=inputHeight.text
             var weight=inputWeight.text
 
+            //set activity
             var activity: Double?=null
                 when {
                     groupActivity.radioBMR.isChecked -> activity = 1.0
@@ -52,6 +58,7 @@ class MainActivity : AppCompatActivity() {
                     groupActivity.radioEActive.isChecked -> activity = 1.9
                 }
 
+            //set goal
             var goal: Int?=null
                 when {
                     groupGoal.radioELoss.isChecked -> goal = -1000
@@ -64,11 +71,13 @@ class MainActivity : AppCompatActivity() {
                 }
         }
 
+        //perform imperial to metric conversions
         fun conversions (weight:Int, height:Int){
             var kg :Double = weight/2.205
             var cm :Double = height*2.54
         }
 
+        //perfrom st jeor equation to find calories
         fun stjeor(kg:Double,cm:Double,gender:String,age:Int,goal:Int) {
             
             var cals: Double=0.0
@@ -80,6 +89,7 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
+        //on button click send to ranges to display data
         fun calculateRanges (view:View,cals:Double){                                                                                                                                                                                                                                                                                                                                                                               8
             var intent=Intent(this,Ranges::class.java)
             intent.putExtra("cals", cals)

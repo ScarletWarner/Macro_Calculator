@@ -36,28 +36,35 @@ class Preferences : AppCompatActivity() {
             var intent=Intent(this,Help::class.java)
             startActivity(intent)
         }
-
+//on apply button click
     fun onApplyBtnClicked (view:View){
+
+        //variables
         var fatPref: Int=0
         var protPref: Int=0
         var carbPref: Int=0
 
+        //check fat radio group
         when {
             fatGroup.fatLow.isChecked -> fatPref = 1
             fatGroup.fatDef.isChecked -> fatPref = 2
             fatGroup.fatHi.isChecked -> fatPref = 3
         }
+
+        //check protein radio group
         when {
             proteinGroup.proDef.isChecked -> protPref = 2
             proteinGroup.proHi.isChecked -> protPref = 3
         }
 
+        //check carb radio group
         when {
             carbGroup.carbLo.isChecked -> carbPref = 1
             carbGroup.carbDef.isChecked -> carbPref = 2
             carbGroup.carbHi.isChecked -> carbPref = 3
         }
 
+        //send preferences to file
         myPref = getPreferences(MODE_PRIVATE)
 
         var editor: SharedPreferences.Editor = (myPref as SharedPreferences).edit()
