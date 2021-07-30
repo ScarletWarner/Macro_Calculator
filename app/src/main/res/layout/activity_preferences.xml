@@ -19,6 +19,7 @@
             android:id="@+id/fatLowRadio"
             android:layout_width="116dp"
             android:layout_height="wrap_content"
+<<<<<<< Updated upstream
             android:text="Low" />
 
         <RadioButton
@@ -63,11 +64,127 @@
             android:layout_width="138dp"
             android:layout_height="wrap_content"
             android:text="Med" />
+=======
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="230dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginRight="30dp"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/fatLow"
+                android:layout_width="113dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="0dp"
+                android:layout_marginLeft="0dp"
+                android:layout_marginBottom="0dp"
+                android:text="Low" />
+
+            <RadioButton
+                android:id="@+id/fatDef"
+                android:layout_width="113dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="0dp"
+                android:layout_marginLeft="0dp"
+                android:layout_marginBottom="0dp"
+                android:text="Default" />
+
+            <RadioButton
+                android:id="@+id/fatHi"
+                android:layout_width="113dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="0dp"
+                android:layout_marginRight="0dp"
+                android:layout_marginBottom="0dp"
+                android:text="High" />
+
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/fatPGroup"
+            android:layout_width="65dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="166dp"
+            android:layout_marginLeft="166dp"
+            android:layout_marginTop="188dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="Fat:"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/ProteinPGruup"
+            android:layout_width="77dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="320dp"
+            android:layout_marginEnd="156dp"
+            android:layout_marginRight="156dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="Protein:"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <RadioGroup
+            android:id="@+id/proteinGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="80dp"
+            android:layout_marginLeft="80dp"
+            android:layout_marginTop="375dp"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/proDef"
+                android:layout_width="113dp"
+                android:layout_height="wrap_content"
+                android:text="Default" />
+
+            <RadioButton
+                android:id="@+id/proHi"
+                android:layout_width="113dp"
+                android:layout_height="wrap_content"
+                android:text="High" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/carbPGroup"
+            android:layout_width="75dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="166dp"
+            android:layout_marginLeft="166dp"
+            android:layout_marginTop="463dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="Carbs:"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+>>>>>>> Stashed changes
 
         <RadioButton
             android:id="@+id/fatHiRadio"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+<<<<<<< Updated upstream
             android:text="High" />
     </RadioGroup>
 
@@ -104,6 +221,50 @@
             android:layout_width="116dp"
             android:layout_height="wrap_content"
             android:text="Low" />
+=======
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="30dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginBottom="150dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <RadioButton
+                android:id="@+id/carbLo"
+                android:layout_width="113dp"
+                android:layout_height="wrap_content"
+                android:text="Low" />
+
+            <RadioButton
+                android:id="@+id/carbDef"
+                android:layout_width="113dp"
+                android:layout_height="wrap_content"
+                android:text="Default" />
+
+            <RadioButton
+                android:id="@+id/carbHi"
+                android:layout_width="113dp"
+                android:layout_height="wrap_content"
+                android:text="High" />
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/applyPref"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="148dp"
+            android:layout_marginLeft="148dp"
+            android:layout_marginBottom="68dp"
+            android:onClick="onApplyBtnClicked"
+            android:text="Apply"
+            app:backgroundTint="#737070"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+>>>>>>> Stashed changes
 
         <RadioButton
             android:id="@+id/fatMedRadio"
